@@ -8,20 +8,18 @@ To achieve modularity means based on need add lib, apps, etc.
     Applications run on image
 ### Commands
   - Docker file for build image<br />
-    Ex: Run spring boot app on containers<br />
-    Docker file<br />
-    Where as,<br />
-    **FROM** - for download libs<br />
-    **VOLUME** - to create a folder and store our data into that<br />
-    **COPY** - Copy the file from source to destination<br />
-    **CMD** - Execute commands inside of docker image<br />
-    
+    Ex: Run spring boot app on container<br />
     ```
     FROM openjdk:11
     VOLUME /tmp
     COPY build/libs/helloworld*.jar /tmp/hellowworld.jar
     CMD [ "java", "-jar", "tmp/hellowworld.jar"]
     ```
+    Where as,<br />
+    **FROM** - for download libs<br />
+    **VOLUME** - to create a folder and store our data into that<br />
+    **COPY** - Copy the file from source to destination<br />
+    **CMD** - Execute commands inside of docker image<br />
   - Docker build
     When trigger build that time it will build image based on docker file configuration.<br />
     ```
