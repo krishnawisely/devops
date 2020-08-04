@@ -33,6 +33,14 @@ To achieve modularity means based on need add lib, apps, etc.
     ```
     docker run --rm -d -p 8989:3434 image_id
     ```
+    Where as,<br />
+    **-p** - 3434 port is nothing but spring boot runing port and expose port is 8989<br />
+    **-d** - Detach mode(While run image, exit from container)<br />
+    **image_id** - Either can give image id or image name with flag<br />
+  - Check wheter the container is running or not
+    ```
+    docker ps
+    ```
   - Test application using exposed port
     ```
     192.168.99.100/docker/
